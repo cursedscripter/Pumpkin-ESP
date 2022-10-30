@@ -1,0 +1,19 @@
+function addUi(part)
+    local partGui = Instance.new("BillboardGui", part)
+    partGui.Size = UDim2.new(1.5,0,1.5,0)
+    partGui.AlwaysOnTop = true
+    partGui.Name = "Locator"
+    local frame = Instance.new("Frame", partGui)
+    frame.BackgroundColor3 = Color3.fromRGB(255,80,60)
+    frame.Size = UDim2.new(1.5,0,1.5,0)
+    frame.BorderSizePixel = 3
+    local nameGui
+
+end
+
+
+for _,v in ipairs(game:GetService("Workspace").Pumpkins:GetChildren()) do
+    if v:FindFirstChild("Primary") ~= nil then
+        addUi(v.Primary)
+    end
+end
